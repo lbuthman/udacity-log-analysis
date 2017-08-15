@@ -58,7 +58,14 @@ below, but for now, let's just get it ready.
     1) After unzipping the the download, move newsdatabase.sql to your
     vagrant directory. Ex. Documents/FSND-Virtual-Machine/vagrant
     2) Run the command `psql -d news -f newsdata.sql`
-- That's it. The database has been created and populated. Let's learn more!
+    
+5. <a href="/create_views.sql">Create Views (download here)</a>
+- This will download the create_views.sql file, which will create the views
+needed for the application's database queries.
+- Instructions:
+    1) Just like before, unzip the download and move create_views.sql to
+    your vagrant direction. Ex. Documents/FSND-Virtual-Machine/vagrant
+    2) Run the command `psql -d news -f create_views.sql`
 
 ## Running the Application
 
@@ -67,6 +74,8 @@ below, but for now, let's just get it ready.
 would like to answer and press Enter.
 3. The result output will display once the query completes! Easy :)
 4. Press 0 and Enter to quit at any time.
+
+## The News Database
 
 ## Advanced Usage
 

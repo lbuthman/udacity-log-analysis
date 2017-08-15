@@ -60,7 +60,7 @@ below, but for now, let's just get it ready.
     2) Run the command `psql -d news -f newsdata.sql`
 - That's it. The database has been created and populated. Let's learn more!
 
-## Quickstart
+## Running the Application
 
 1. Start the application from the command line `python3 log_analysis.py`
 2. The application will print a menu. Enter the number of the question you

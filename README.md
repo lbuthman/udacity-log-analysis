@@ -1,3 +1,5 @@
+# Log Analysis Tool for News Database
+
 ## Quickstart
 
 1. Start the application from the command line `python3 log_analysis.py`

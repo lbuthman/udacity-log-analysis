@@ -14,18 +14,21 @@ MENU = """
 
 
 def print_articles(articles):
+    """Prints article name and total views for each article to standard out"""
     for article in articles:
         print("\tArticle Title: {} -- Total Views: {}".format(
             article[0], article[1]))
 
 
 def print_authors(authors):
+    """Prints author names and total views for all written articles to standard out"""
     for author in authors:
         print("\tAuthor Name: {} -- Total Views: {}".format(
             author[0], author[1]))
 
 
 def print_days(days):
+    """Prints each date with error response percentage"""
     for day in days:
         print("\tDay: {}-{}-{} -- Error Responses: {}%".format(
             int(day[0]), int(day[1]), int(day[2]), day[3]))

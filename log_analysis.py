@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import log_analysis_db
 
 print("\n\tHi! And welcome to the Easy News database analysis tool.")

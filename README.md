@@ -69,7 +69,10 @@ needed for the application's database queries.
 
 ## Running the Application
 
-1. Start the application from the command line `python3 log_analysis.py`
+Phew! That was a little work getting everything setup. Good job! You are now
+ready to run the application. Don't worry, this part is easy.
+
+1. Start the application from your terminal `python3 log_analysis.py`
 2. The application will print a menu. Enter the number of the question you
 would like to answer and press Enter.
 3. The result output will display once the query completes! Easy :)

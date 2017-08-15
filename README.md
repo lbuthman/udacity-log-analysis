@@ -13,59 +13,59 @@ While the Log Analysis Tool is easy to use, there is a bit of setup
 required to get going. Nothing too complicated though :)
 
 1. <a href="https://www.virtualbox.org/wiki/Downloads">Virtual Box (download here)</a> 
-- "VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted 
-at server, desktop and embedded use."
-- Translation: Think virtual computer.
-VirtualBox gives you a virtual computer you can play with, break, and rebuild
-without damaging your actual computer. Nifty!
-- Instructions: Simply install the correct platform package for your Operating
-System. Once installed, you don't even need to open it.
+    - "VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted 
+    at server, desktop and embedded use."
+    - Translation: Think virtual computer.
+    VirtualBox gives you a virtual computer you can play with, break, and rebuild
+    without damaging your actual computer. Nifty!
+    - Instructions: Simply install the correct platform package for your Operating
+    System. Once installed, you don't even need to open it.
 
 2. <a href="https://www.vagrantup.com/downloads.html">Vagrant (download here)</a>
-- "Vagrant 
-is a tool for building and managing virtual machine environments in a single 
-workflow."
-- Translation: Think helper for VirtualBox.
-- Instructions: Simply install the correct version for your Operating System.
-- Warning for Windows users: The Installer may ask you to grant network 
-permissions to Vagrant or make a firewall exception. Be sure to allow this.
-- Verify: To verify the installation setup, open your Terminal and type
-`vagrant --version`. If successful, you will see your Vagrant version.
+    - "Vagrant 
+    is a tool for building and managing virtual machine environments in a single 
+    workflow."
+    - Translation: Think helper for VirtualBox.
+    - Instructions: Simply install the correct version for your Operating System.
+    - Warning for Windows users: The Installer may ask you to grant network 
+    permissions to Vagrant or make a firewall exception. Be sure to allow this.
+    - Verify: To verify the installation setup, open your Terminal and type
+    `vagrant --version`. If successful, you will see your Vagrant version.
 
 3. <a href="https://d17h27t6h515a5.cloudfront.net/topher/2017/August/59822701_fsnd-virtual-machine/fsnd-virtual-machine.zip">FSND-Virtual-Machine (download here)</a>
-- What? You don't know how to setup VirtualBox and Vagrant? No worries, 
-the good folks at Udacity have created one for you! Sweet!
-- Even if you already know how to use VirtualBox and Vagrant, you still need
-to download and use this Vagrant build. It is preconfigured wit necessary
-applications, plugins, and databases required for this tool.
-- Instructions: 
-    1) Unzip the folder and (optionally) move it into the directory
-you want it to live in (I use Documents).
-    2) Use the terminal to cd into the directory `cd Documents/FSND-Virtual-Machine`
-    3) Run the command `vagrant up` to start your Virtual Machine.
-    4) Wait for a while :) -- this will take some time since it is installing 
-    an entire computer on your computer. Think about that! (\**mind explodes**)
-    5) Once completed, your shell will return the prompt you are used to
-    seeing. From here, you can log in to your new computer by typing
-    `vagrant ssh` into the shell.
-    6) Run the command `cd /vagrant`
+    - What? You don't know how to setup VirtualBox and Vagrant? No worries, 
+    the good folks at Udacity have created one for you! Sweet!
+    - Even if you already know how to use VirtualBox and Vagrant, you still need
+    to download and use this Vagrant build. It is preconfigured wit necessary
+    applications, plugins, and databases required for this tool.
+    - Instructions: 
+        1) Unzip the folder and (optionally) move it into the directory
+    you want it to live in (I use Documents).
+        2) Use the terminal to cd into the directory `cd Documents/FSND-Virtual-Machine`
+        3) Run the command `vagrant up` to start your Virtual Machine.
+        4) Wait for a while :) -- this will take some time since it is installing 
+        an entire computer on your computer. Think about that! (\**mind explodes**)
+        5) Once completed, your shell will return the prompt you are used to
+        seeing. From here, you can log in to your new computer by typing
+        `vagrant ssh` into the shell.
+        6) Run the command `cd /vagrant`
 
 4. <a href="https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip">News Data SQL (download here)</a>
-- This will download the newsdatabase.sql file, which will create the
-database the program will run against. The database will be discuss more
-below, but for now, let's just get it ready.
-- Instructions: 
-    1) After unzipping the the download, move newsdatabase.sql to your
-    vagrant directory. Ex. Documents/FSND-Virtual-Machine/vagrant
-    2) Run the command `psql -d news -f newsdata.sql`
+    - This will download the newsdatabase.sql file, which will create the
+    database the program will run against. The database will be discuss more
+    below, but for now, let's just get it ready.
+    - Instructions: 
+        1) After unzipping the the download, move newsdatabase.sql to your
+        vagrant directory. Ex. Documents/FSND-Virtual-Machine/vagrant
+        2) Run the command `psql -d news -f newsdata.sql`
     
 5. <a href="/create_views.sql">Create Views (download here)</a>
-- This will download the create_views.sql file, which will create the views
-needed for the application's database queries.
-- Instructions:
-    1) Just like before, unzip the download and move create_views.sql to
-    your vagrant direction. Ex. Documents/FSND-Virtual-Machine/vagrant
-    2) Run the command `psql -d news -f create_views.sql`
+    - This will download the create_views.sql file, which will create the views
+    needed for the application's database queries.
+    - Instructions:
+        1) Just like before, unzip the download and move create_views.sql to
+        your vagrant direction. Ex. Documents/FSND-Virtual-Machine/vagrant
+        2) Run the command `psql -d news -f create_views.sql`
 
 ## Running the Application
 

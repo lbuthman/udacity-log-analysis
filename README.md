@@ -94,26 +94,30 @@ Note: This log analysis tools relies on a few Views. When you went through the
 setup above, you actually installed each of these views already. However, it
 might be nice to know a bit more about them. You can find each below.
 
-1. ```sql
+```sql
 CREATE VIEW author_article AS
 SELECT name, slug
 FROM authors, articles
-WHERE authors.id = articles.author;```
+WHERE authors.id = articles.author;
+```
 
-2. ```sql
+```sql
 CREATE VIEW view_errors AS
 SELECT date_trunc('day', log.time) AS day, COUNT(*)
 FROM log WHERE status = '404 NOT FOUND'
-GROUP BY day;```
+GROUP BY day;
+```
 
-3. ```sql
+```sql
 CREATE VIEW view_total AS 
 SELECT date_trunc('day', log.time) AS day, COUNT(*) 
 FROM log 
-GROUP BY day;```
+GROUP BY day;
+```
 
-4. ```sql
+```sql
 CREATE VIEW error_percentage AS 
 SELECT view_total.day, (view_errors.count::decimal / view_total.count) * 100 AS percentage 
 FROM view_total, view_errors 
-WHERE view_total.day = view_errors.day;```
+WHERE view_total.day = view_errors.day;
+```

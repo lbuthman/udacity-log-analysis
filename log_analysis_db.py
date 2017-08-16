@@ -3,6 +3,20 @@ import psycopg2
 DBNAME = 'news'
 
 
+def execute_query(query):
+    """Helper function that connects to database and executes
+    passed query. Returns a list of tuples containing query results."""
+    try:
+        db = psycopg2.connect(database=DBNAME)
+        cursor = db.cursor()
+        cursor.execute(query)
+        results = cursor.fetchall()
+        db.close()
+        return results
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+
+
 def get_top_three_articles():
     """"Return the three most popular articles of all time."""
     db = psycopg2.connect(database=DBNAME)

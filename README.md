@@ -10,7 +10,7 @@ questions from the news database (provided).
 ## Required Setup
 
 While the Log Analysis Tool is easy to use, there is a bit of setup
-required to get going. Nothing too complicated though :grin:
+required to get going. Nothing too complicated though.
 
 1. <a href="https://www.virtualbox.org/wiki/Downloads">Virtual Box (download here)</a> 
     - "VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted 
@@ -36,7 +36,7 @@ required to get going. Nothing too complicated though :grin:
     - What? You don't know how to setup VirtualBox and Vagrant? No worries, 
     the good folks at Udacity have created one for you! Sweet!
     - Even if you already know how to use VirtualBox and Vagrant, you still need
-    to download and use this Vagrant build. It is preconfigured wit necessary
+    to download and use this Vagrant build. It is preconfigured with necessary
     applications, plugins, and databases required for this tool.
     - Instructions: 
         1) Unzip the folder and (optionally) move it into the directory
@@ -55,7 +55,7 @@ required to get going. Nothing too complicated though :grin:
     database the program will run against. The database will be discuss more
     below, but for now, let's just get it ready.
     - Instructions: 
-        1) After unzipping the the download, move newsdatabase.sql to your
+        1) After unzipping the download, move newsdatabase.sql to your
         vagrant directory. Ex. Documents/FSND-Virtual-Machine/vagrant
         2) Run the command `psql -d news -f newsdata.sql`
     
@@ -75,7 +75,7 @@ ready to run the application. Don't worry, this part is easy. :relieved:
 1. Start the application from your terminal `python3 log_analysis.py`
 2. The application will print a menu. Enter the number of the question you
 would like to answer and press Enter.
-3. The result output will display once the query completes! Easy :)
+3. The result output will display once the query completes! Easy!
 4. Press 0 and Enter to quit at any time.
 
 ## The News Database
@@ -103,14 +103,15 @@ WHERE authors.id = articles.author;
 
 ```sql
 CREATE VIEW view_errors AS
-SELECT date_trunc('day', log.time) AS day, COUNT(*)
-FROM log WHERE status = '404 NOT FOUND'
+SELECT log.time::date AS day, COUNT(*)
+FROM log 
+WHERE status = '404 NOT FOUND'
 GROUP BY day;
 ```
 
 ```sql
 CREATE VIEW view_total AS 
-SELECT date_trunc('day', log.time) AS day, COUNT(*) 
+SELECT log.time::date AS day, COUNT(*) 
 FROM log 
 GROUP BY day;
 ```

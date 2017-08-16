@@ -10,14 +10,14 @@ questions from the news database (provided).
 ## Required Setup
 
 While the Log Analysis Tool is easy to use, there is a bit of setup
-required to get going. Nothing too complicated though :)
+required to get going. Nothing too complicated though :grin:
 
 1. <a href="https://www.virtualbox.org/wiki/Downloads">Virtual Box (download here)</a> 
     - "VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted 
     at server, desktop and embedded use."
     - Translation: Think virtual computer.
     VirtualBox gives you a virtual computer you can play with, break, and rebuild
-    without damaging your actual computer. Nifty!
+    without damaging your actual computer. Nifty! :bowtie:
     - Instructions: Simply install the correct platform package for your Operating
     System. Once installed, you don't even need to open it.
 

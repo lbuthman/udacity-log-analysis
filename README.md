@@ -90,18 +90,30 @@ you don't need to know much about them to run the application.
 
 ## Advanced Usage
 
-Note: This log analysis tools relies on a few Views. You can recreate, retool,
-or refactor these views easily. Find the views created below.
+Note: This log analysis tools relies on a few Views. When you went through the
+setup above, you actually installed each of these views already. However, it
+might be nice to know a bit more about them. You can find each below.
 
-1. `CREATE VIEW author_article AS SELECT name, slug FROM authors, articles 
-WHERE authors.id = articles.author;`
+1. ```sql
+CREATE VIEW author_article AS
+SELECT name, slug
+FROM authors, articles
+WHERE authors.id = articles.author;```
 
-2. `CREATE VIEW view_errors AS SELECT date_trunc('day', log.time) AS day, COUNT(*) 
-FROM log WHERE status = '404 NOT FOUND' GROUP BY day;`
+2. ```sql
+CREATE VIEW view_errors AS
+SELECT date_trunc('day', log.time) AS day, COUNT(*)
+FROM log WHERE status = '404 NOT FOUND'
+GROUP BY day;```
 
-3. `CREATE VIEW view_total AS SELECT date_trunc('day', log.time) AS day, COUNT(*) 
-FROM log GROUP BY day;`
+3. ```sql
+CREATE VIEW view_total AS 
+SELECT date_trunc('day', log.time) AS day, COUNT(*) 
+FROM log 
+GROUP BY day;```
 
-4. `CREATE VIEW error_percentage AS SELECT view_total.day, 
-(view_errors.count::decimal / view_total.count) * 100 AS percentage 
-FROM view_total, view_errors WHERE view_total.day = view_errors.day;`
+4. ```sql
+CREATE VIEW error_percentage AS 
+SELECT view_total.day, (view_errors.count::decimal / view_total.count) * 100 AS percentage 
+FROM view_total, view_errors 
+WHERE view_total.day = view_errors.day;```

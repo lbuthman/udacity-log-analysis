@@ -70,7 +70,7 @@ required to get going. Nothing too complicated though :grin:
 ## Running the Application
 
 Phew! That was a little work getting everything setup. Good job! You are now
-ready to run the application. Don't worry, this part is easy.
+ready to run the application. Don't worry, this part is easy. :relieved:
 
 1. Start the application from your terminal `python3 log_analysis.py`
 2. The application will print a menu. Enter the number of the question you
@@ -79,6 +79,14 @@ would like to answer and press Enter.
 4. Press 0 and Enter to quit at any time.
 
 ## The News Database
+
+The 'news' database is a PostgreSQL database filled with logs for a pretend,
+nameless news paper company. (Although, we could call it Fake News Inc.) The
+database is filled with 'logs' from 'user requests'.
+
+The database contains three tables: 'authors', 'articles', and 'log'. I would
+encourage you to explore the databases if you are familiar with PostgreSQL, but
+you don't need to know much about them to run the application. 
 
 ## Advanced Usage
 

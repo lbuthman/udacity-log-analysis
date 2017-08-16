@@ -30,8 +30,10 @@ def print_authors(authors):
 def print_days(days):
     """Prints each date with error response percentage"""
     for day in days:
-        print("\tDay: {}-{}-{} -- Error Responses: {}%".format(
-            int(day[0]), int(day[1]), int(day[2]), day[3]))
+        date = day[0].strftime('%B %d, %Y')
+        percent = day[1]
+        print("\tDay: {} -- Error Responses: {}%".format(
+            date, percent))
 
 
 while True:

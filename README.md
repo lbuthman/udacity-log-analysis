@@ -1,4 +1,4 @@
-# Log Analysis Tool for News Database
+# Log Analysis Project
 
 The Log Analysis project aims to simplify the process of answering the following
 questions from the news database (provided).
